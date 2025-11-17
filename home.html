@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashn-e-Azadi - Pakistan Independence Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== Enhanced Pakistan Independence Day Styles ===== */
+        :root {
+            --pak-green: #046A38;
+            --dark-green: #01411C;
+            --light-green: #92D293;
+            --star-white: #FFFFFF;
+            --cream: #F8F8F0;
+            --gold: #FFD700;
+            --moon-gold: #F9A602;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --deep-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, var(--cream), var(--light-green));
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, rgba(4, 106, 56, 0.05) 25%, transparent 25%) -20px 0,
+                linear-gradient(225deg, rgba(4, 106, 56, 0.05) 25%, transparent 25%) -20px 0,
+                linear-gradient(315deg, rgba(4, 106, 56, 0.05) 25%, transparent 25%),
+                linear-gradient(45deg, rgba(4, 106, 56, 0.05) 25%, transparent 25%);
+            background-size: 40px 40px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark-green), var(--pak-green));
+            color: var(--star-white);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: var(--deep-shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+            z-index: -1;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .crescent {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: inset 15px 0 0 0 var(--moon-gold);
+            transform: rotate(-20deg);
+        }
+
+        .star {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            color: var(--gold);
+            font-size: 2rem;
+            animation: twinkle 3s infinite;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        nav a {
+            color: var(--star-white);
+            text-decoration: none;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        nav a:hover::before {
+            left: 100%;
+        }
+
+        nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(4, 106, 56, 0.85), rgba(1, 65, 28, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%2304613a" opacity="0.4"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--star-white);
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flag-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .flag {
+            width: 300px;
+            height: 180px;
+            background: linear-gradient(90deg, #046A38 30%, white 30%, white 70%, #046A38 70%);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: var(--deep-shadow);
+            overflow: hidden;
+        }
+
+        .crescent-star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+        }
+
+        .crescent-flag {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: inset 12px 0 0 0 var(--moon-gold);
+            transform: translate(-50%, -50%) rotate(-20deg);
+        }
+
+        .star-flag {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: var(--gold);
+            font-size: 1.8rem;
+            transform: translate(20%, -50%);
+            animation: twinkle 3s infinite;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--star-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--pak-green);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--deep-shadow);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--pak-green), var(--dark-green));
+            color: var(--star-white);
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--light-green);
+        }
+
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+
+        .facts-section {
+            background: var(--star-white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--gold);
+        }
+
+        .facts-section h2 {
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .facts-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--moon-gold));
+            border-radius: 2px;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .fact-item {
+            background: rgba(146, 210, 147, 0.2);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--light-green);
+            transition: var(--transition);
+        }
+
+        .fact-item:hover {
+            transform: scale(1.05);
+            background: rgba(146, 210, 147, 0.3);
+        }
+
+        .fact-item i {
+            font-size: 2.5rem;
+            color: var(--pak-green);
+            margin-bottom: 1rem;
+        }
+
+        .fact-item h4 {
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-green), var(--pak-green));
+            color: var(--star-white);
+            text-align: center;
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: 5rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,0 Q50,20 100,0 Z" fill="%23046A38"/></svg>');
+            background-size: 100% 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        footer h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--light-green);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--star-white);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; text-shadow: 0 0 10px var(--gold); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav {
+                gap: 0.7rem;
+            }
+            
+            nav a {
+                padding: 0.6rem 1.2rem;
+                font-size: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .crescent, .star {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1.5rem 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.7rem;
+            }
+            
+            nav a {
+                width: 80%;
+                text-align: center;
+            }
+            
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+            
+            .flag {
+                width: 250px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="crescent"></div>
+            <div class="star"><i class="fas fa-star"></i></div>
+            <h1>Jashn-e-Azadi - Pakistan Independence Day</h1>
+            <p>Celebrating Pakistan's Independence - August 14</p>
+            <nav>
+                <a href="home.html" class="active">Home</a>
+                <a href="History.html">History</a>
+                <a href="Celebration.html">Celebration</a>
+                <a href="National Heores.html">National Heroes</a>
+                <a href="contact us.html">Contact us</a>
+                <a href="about us.html">About us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Celebrating 78 Years of Freedom</h2>
+            <p>Honoring our past, celebrating our present, and building our future</p>
+            
+            <div class="flag-container">
+                <div class="flag float-animation">
+                    <div class="crescent-star">
+                        <div class="crescent-flag"></div>
+                        <div class="star-flag"><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>History of Independence</h3>
+                </div>
+                <div class="card-body">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%2392D293'/><text x='150' y='90' font-family='Arial' font-size='24' fill='%230146A3' text-anchor='middle'>Historical Monument</text></svg>" alt="Historical Image">
+                    <p>Pakistan gained independence from British rule on August 14, 1947, following a remarkable struggle led by Quaid-e-Azam Muhammad Ali Jinnah.</p>
+                    <p>The journey to independence was marked by sacrifices, determination, and the unwavering spirit of millions of Muslims in the subcontinent.</p>
+                    <a href="History.html" class="back-link">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Celebrations</h3>
+                </div>
+                <div class="card-body">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%23FFD700'/><text x='150' y='90' font-family='Arial' font-size='24' fill='%230146A3' text-anchor='middle'>Celebration Event</text></svg>" alt="Celebration Image">
+                    <p>Independence Day is celebrated with great enthusiasm across Pakistan. The day begins with flag-hoisting ceremonies and national anthem recitals.</p>
+                    <p>People decorate their homes, streets, and vehicles with flags and buntings. Cultural events and fireworks light up the night sky.</p>
+                    <a href="Celebration.html" class="back-link">Celebrate With Us</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>National Heroes</h3>
+                </div>
+                <div class="card-body">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%2304613a'/><text x='150' y='90' font-family='Arial' font-size='24' fill='%23FFFFFF' text-anchor='middle'>National Heroes</text></svg>" alt="Heroes Image">
+                    <p>Pakistan's independence was achieved through the sacrifices of countless heroes who dedicated their lives to the cause of a separate homeland.</p>
+                    <p>From Quaid-e-Azam Muhammad Ali Jinnah to Allama Iqbal, Fatima Jinnah, and many unsung heroes, we honor their legacy and contributions.</p>
+                    <a href="National Heroes.html" class="back-link">Meet Our Heroes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="facts-section">
+            <h2>Quick Facts About Pakistan</h2>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Independence Day</h4>
+                    <p>August 14, 1947</p>
+                </div>
+                
+                <div class="fact-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Founding Father</h4>
+                    <p>Quaid-e-Azam Muhammad Ali Jinnah</p>
+                </div>
+                
+                <div class="fact-item">
+                    <i class="fas fa-language"></i>
+                    <h4>National Language</h4>
+                    <p>Urdu</p>
+                </div>
+                
+                <div class="fact-item">
+                    <i class="fas fa-mosque"></i>
+                    <h4>Religion</h4>
+                    <p>96.4% Muslim Population</p>
+                </div>
+                
+                <div class="fact-item">
+                    <i class="fas fa-flag"></i>
+                    <h4>National Dress</h4>
+                    <p>Shalwar Kameez</p>
+                </div>
+                
+                <div class="fact-item">
+                    <i class="fas fa-mountain"></i>
+                    <h4>Highest Peak</h4>
+                    <p>K2 (8,611 meters)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+            <h4>Jashn-e-Azadi - Pakistan Independence Day</h4>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">History</a>
+                <a href="#">Events</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Pakistan Independence Day Celebration. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <style>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Zaryyab - Passionate Learner & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2E8B57;
+            --primary-light: #3CB371;
+            --primary-dark: #1a5334;
+            --secondary: #F8F9FA;
+            --accent: #FF6B6B;
+            --text-dark: #333333;
+            --text-light: #F8F9FA;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6f4e6 0%, #f8fff8 100%);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(46, 139, 87, 0.1) 0%, transparent 15%),
+                radial-gradient(circle at 90% 80%, rgba(60, 179, 113, 0.1) 0%, transparent 15%),
+                radial-gradient(circle at 30% 60%, rgba(26, 83, 52, 0.1) 0%, transparent 12%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            position: relative;
+        }
+
+        .profile-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, var(--primary-light), var(--primary-dark));
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-container i {
+            font-size: 70px;
+            color: rgb(165, 19, 19);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .bio {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(60, 179, 113, 0.2);
+        }
+
+        .bio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .bio p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .bio p::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .skills {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(60, 179, 113, 0.2);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-category h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        .skill-category h2 i {
+            margin-right: 12px;
+            color: var(--primary);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-item {
+            background: var(--primary-light);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+            margin: 20px auto 50px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .home-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(46, 139, 87, 0.4);
+        }
+
+        .home-btn:active {
+            transform: translateY(1px);
+        }
+
+        .home-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .home-btn:hover::after {
+            transform: translateX(100%);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(46, 139, 87, 0.2);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content {
+                flex-direction: column;
+            }
+            
+            .bio, .skills {
+                width: 100%;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header, .bio, .skill-category {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .bio { animation-delay: 0.2s; }
+        .skill-category { animation-delay: 0.4s; }
+        .home-btn { animation: fadeIn 0.8s ease-out 0.6s forwards; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-container">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>About Me</h1>
+            <p class="tagline">Passionate Learner • Aspiring Developer • Continuous Improver</p>
+        </header>
+
+        <div class="content">
+            <div class="bio">
+                <p>Hi, I'm Ahmad, a passionate learner with a deep interest in technology, coding, and self-improvement. I'm currently studying in 11th grade (ICS with Physics) and building the skills that will help me shape my future.</p>
+                
+                <p>My journey into the world of programming began with HTML, and I'm now expanding my knowledge into CSS and JavaScript to create functional, beautiful, and user-friendly websites.</p>
+                
+                <p>I have a strong belief in continuous learning and hands-on practice. Every project I work on, no matter how small, is a step toward becoming a skilled front-end developer. I enjoy turning ideas into reality through code, and I see web development not just as a career path but as a creative outlet.</p>
+                
+                <p>In addition to coding, I'm committed to improving my English so I can connect with people worldwide, understand diverse perspectives, and collaborate on projects beyond borders. Communication and creativity are equally important to me as technical skills.</p>
+                
+                <p>This website is more than a project—it's a reflection of my dedication, discipline, and drive to grow. My vision is to keep learning, building, and sharing my progress so that one day, I can create impactful solutions that make a difference in people's lives.</p>
+            </div>
+            
+            <div class="skills">
+                <div class="skill-category">
+                    <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">HTML5</div>
+                        <div class="skill-item">CSS3</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Responsive Design</div>
+                        <div class="skill-item">UI/UX Principles</div>
+                        <div class="skill-item">Problem Solving</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h2><i class="fas fa-book"></i> Currently Learning</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">Advanced CSS</div>
+                        <div class="skill-item">JavaScript ES6+</div>
+                        <div class="skill-item">Frontend Frameworks</div>
+                        <div class="skill-item">Web Performance</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h2><i class="fas fa-globe"></i> Personal Development</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">English Proficiency</div>
+                        <div class="skill-item">Communication</div>
+                        <div class="skill-item">Creativity</div>
+                        <div class="skill-item">Self-Discipline</div>
+                        <div class="skill-item">Collaboration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="home.html" class="home-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart" style="color: var(--accent);"></i> by Zaryyab | &copy; 2023</p>
+        </footer>
+    </div>
+</body>
+</html>  
+    </style>
+</head>
+<body>
+</html>

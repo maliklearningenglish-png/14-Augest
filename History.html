@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        < !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Road to Independence - Pakistan Movement</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
+
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #046A38;
+            --dark-green: #01411C;
+            --light-green: #E6F4E6;
+            --accent-gold: #00ff37;
+            --pure-white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #F5F5F5;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #f8fff8 0%, #e6f4e6 100%);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 90% 10%, rgba(4, 106, 56, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 10% 90%, rgba(1, 65, 28, 0.05) 0%, transparent 20%);
+            z-index: -1;
+        }
+
+        /* Header with Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            color: var(--pure-white);
+            padding: 2rem 1rem 5rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,20 100,0 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .logo-icon i {
+            font-size: 28px;
+            color: var(--dark-green);
+        }
+
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 1.5rem 0;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        header h1 span {
+            color: var(--accent-gold);
+            display: block;
+            font-size: 2.2rem;
+            margin-top: 0.5rem;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--dark-green);
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            max-width: 1200px;
+            margin: -60px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-green);
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-green);
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 20px);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 20px);
+        }
+
+        .timeline-content {
+            background: var(--pure-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            border-left: none;
+            border-right: 4px solid var(--primary-green);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: -20px;
+            background: var(--primary-green);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -15px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -15px;
+        }
+
+        .timeline-content h3 {
+            color: var(--dark-green);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Minar-e-Pakistan Section */
+        .monument-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(230, 244, 230, 0.9)),
+                url('https://images.unsplash.com/photo-1588416499695-55407d229ea3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .monument-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .monument-content h2 {
+            color: var(--dark-green);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .monument-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            border: 5px solid var(--pure-white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .monument-image img {
+            width: 100%;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .monument-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(4, 106, 56, 0.85);
+            color: white;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Key Figures Section */
+        .figures-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .figure-card {
+            background: var(--pure-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .figure-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .figure-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .figure-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .figure-card:hover .figure-image img {
+            transform: scale(1.1);
+        }
+
+        .figure-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(4, 106, 56, 0.9));
+            color: white;
+            padding: 20px 15px 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .figure-details {
+            padding: 20px;
+        }
+
+        .figure-details p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-green), var(--primary-green));
+            color: var(--text-light);
+            padding: 60px 20px 30px;
+            text-align: center;
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .social-links i {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background: var(--accent-gold);
+            color: var(--dark-green);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 40px 0 20px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .back-button:hover {
+            background: var(--pure-white);
+            transform: translateY(-3px);
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                padding-left: 70px !important;
+                padding-right: 20px !important;
+                text-align: left !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-year,
+            .timeline-item:nth-child(even) .timeline-year {
+                left: 0;
+                right: auto;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Header -->
+    <header>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-monument"></i>
+                </div>
+                <div class="logo-text">PAKISTAN HISTORY</div>
+            </div>
+
+            <h1>THE ROAD TO INDEPENDENCE<br><span>Pakistan Movement</span></h1>
+
+            <p>The <b>Pakistan Movement</b> was a political struggle that aimed to create a separate homeland for
+                Muslims of the Indian subcontinent. Led by Muhammad Ali Jinnah and the All India Muslim League, it
+                sought to protect Muslim rights and culture, eventually leading to the creation of Pakistan on 14 August
+                1947.</p>
+
+            <a href="#timeline" class="cta-button">Explore the Journey</a>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <h2 class="section-title animated">Key Events Leading to Independence</h2>
+
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item animated delay-1">
+                <div class="timeline-content">
+                    <div class="timeline-year">1906</div>
+                    <h3>Formation of the All India Muslim League</h3>
+                    <p>The All India Muslim League was established in Dhaka, creating a political platform for Indian
+                        Muslims to voice their concerns and protect their rights within the Indian subcontinent.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item animated delay-1">
+                <div class="timeline-content">
+                    <div class="timeline-year">1930</div>
+                    <h3>Allama Iqbal's Allahabad Address</h3>
+                    <p>Allama Muhammad Iqbal proposed the idea of a separate Muslim state in northwestern India during
+                        his presidential address at the Allahabad session of the Muslim League.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item animated delay-2">
+                <div class="timeline-content">
+                    <div class="timeline-year">1940</div>
+                    <h3>Lahore Resolution</h3>
+                    <p>The historic Lahore Resolution was passed at Minto Park (now Iqbal Park, Lahore), demanding
+                        independent states for Muslims in the northwestern and eastern zones of India.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item animated delay-2">
+                <div class="timeline-content">
+                    <div class="timeline-year">1946</div>
+                    <h3>Direct Action Day</h3>
+                    <p>The Muslim League called for Direct Action Day to demand Pakistan, marking a turning point in the
+                        independence movement and demonstrating the resolve of Muslims for a separate homeland.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item animated delay-3">
+                <div class="timeline-content">
+                    <div class="timeline-year">1947</div>
+                    <h3>Independence Achieved</h3>
+                    <p>Pakistan emerged as an independent sovereign state on 14 August 1947 after the partition of the
+                        subcontinent, fulfilling the dream of millions of Muslims.</p>
+                </div>
+    </section>
+    <!-- Minar-e-Pakistan Section -->
+    <section class="monument-section">
+        <div class="monument-content animated">
+            <h2>Minar-e-Pakistan: Symbol of Freedom</h2>
+            <p>Constructed in 1968 at the site of the historic Lahore Resolution, Minar-e-Pakistan stands as a national
+                monument commemorating the struggle for Pakistan. The tower blends Mughal and modern architectural
+                styles, symbolizing the nation's rich heritage and progressive future.</p>
+
+            <div class="monument-image">
+                <img src="https://media.istockphoto.com/id/1958270645/photo/a-180-degree-aerial-panorama-of-minar-e-pakistan-after-rain-and-in-clear-weather.jpg?s=612x612&w=0&k=20&c=DWY5i19uCaZB3y29rk4jW-vBSAiP72KLr4GMXJsHNJ0="
+                    alt="Minar-e-Pakistan">
+                <div class="image-caption">Minar-e-Pakistan in Lahore - The Tower of Pakistan</div>
+            </div>
+
+            <p>The monument stands at the exact location where the historic Lahore Resolution was passed on March 23,
+                1940. This resolution ultimately led to the creation of Pakistan seven years later.</p>
+        </div>
+    </section>
+    <!-- Key Figures Section -->
+    <section class="figures-section">
+        <h2 class="section-title animated">Architects of Independence</h2>
+
+        <div class="figures-grid">
+            <!-- Figure 1 -->
+            <div class="figure-card animated delay-1">
+                <div class="figure-image">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Muhammad Ali Jinnah">
+                    <div class="figure-name">Muhammad Ali Jinnah</div>
+                </div>
+                <div class="figure-details">
+                    <h3>Quaid-e-Azam</h3>
+                    <p>Founder of Pakistan and first Governor-General. Known as "Great Leader" for his pivotal role in
+                        the independence movement.</p>
+                </div>
+            </div>
+
+            <!-- Figure 2 -->
+            <div class="figure-card animated delay-2">
+                <div class="figure-image">
+                    <img src="https://i.pinimg.com/474x/9c/e4/c9/9ce4c9137d7e6c42298e9a9c61a56744.jpg"
+                        alt="Allama Iqbal">
+                    <div class="figure-name">Allama Iqbal</div>
+                </div>
+                <div class="figure-details">
+                    <h3>Philosopher & Poet</h3>
+                    <p>Provided the philosophical foundation for Pakistan through his poetry and 1930 Allahabad Address.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Figure 3 -->
+            <div class="figure-card animated delay-3">
+                <div class="figure-image">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Liaquat Ali Khan">
+                    <div class="figure-name">Liaquat Ali Khan</div>
+                </div>
+                <div class="figure-details">
+                    <h3>First Prime Minister</h3>
+                    <p>Right-hand man of Jinnah and Pakistan's first Prime Minister who helped establish the new nation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About This Project</h3>
+                <p>This educational resource documents Pakistan's journey to independence through interactive timelines,
+                    historical insights, and multimedia content.</p>
+                <p>Our mission is to preserve and share the rich history of Pakistan's freedom movement with future
+                    generations.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore More</h3>
+                <a href="#">Historical Documents</a>
+                <a href="#">Photo Archives</a>
+                <a href="#">Freedom Fighters</a>
+                <a href="#">Partition Stories</a>
+                <a href="#">National Monuments</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <p>Subscribe to our newsletter for updates on new content and historical insights.</p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Pakistan History Archives. All rights reserved. | Preserving Our National Heritage</p>
+        </div>
+    </footer>
+
+    <!-- Back Button -->
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="home.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <script>
+        // Simple animation observer
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.animated');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
